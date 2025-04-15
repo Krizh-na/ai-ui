@@ -38,7 +38,7 @@ function copyCode(codeId, copiedId) {
     copiedMessage.classList.add('visible');
     setTimeout(() => {
       copiedMessage.classList.remove('visible');
-    }, 1500);
+    }, 1500); 
   }).catch(err => {
     console.error("Failed to copy:", err);
   });
@@ -48,4 +48,21 @@ function copyCode(codeId, copiedId) {
 function togglePreview(previewId) {
   const previewBox = document.getElementById(previewId);
   previewBox.style.display = previewBox.style.display === 'block' ? 'none' : 'block';
+}
+let progress = 0;
+
+function startProgress() {
+  const progressBar = document.getElementById('progress-bar');
+
+  const interval = setInterval(() => {
+    progress += 5; // Increase progress by 5%
+
+    if (progress >= 100) {
+      progress = 100; // Stop at 100%
+      clearInterval(interval); // Stop the progress update
+    }
+
+    progressBar.style.width = progress + '%';
+    progressBar.textContent = progress + '%'; // Display progress percentage
+  }, 500); // Update every 500ms
 }

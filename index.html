@@ -35,6 +35,7 @@
   <!-- UI Components -->
   <div class="container">
 
+
     <!-- Card -->
     <div class="box">
       <span class="copy-icon" title="Copy" onclick="copyCode('card-code', 'card-copied')">🔗</span>
@@ -125,6 +126,74 @@
       </div>
     </div>
   </div>
+  <!-- Switch -->
+<div class="box">
+  <span class="copy-icon" title="Copy" onclick="copyCode('switch-code', 'switch-copied')">🔗</span>
+  <h2>Switch Example</h2>
+  <label class="ui-switch">
+    <input type="checkbox" />
+    <span class="slider"></span>
+  </label>
+  <button class="copy-btn" onclick="togglePreview('switch-preview')">Preview</button>
+  <div class="preview-box" id="switch-preview">
+    <label class="ui-switch">
+      <input type="checkbox" />
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div id="switch-code" style="display: none;">
+    &lt;label class="ui-switch"&gt;
+      &lt;input type="checkbox" /&gt;
+      &lt;span class="slider"&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  </div>
+  <span id="switch-copied" class="copied-message">Copied!</span>
+</div>
+
+<!-- Alert -->
+<div class="box">
+  <span class="copy-icon" title="Copy" onclick="copyCode('alert-code', 'alert-copied')">🔗</span>
+  <h2>Alert Example</h2>
+  <div class="alert">This is an alert message.</div>
+  <button class="copy-btn" onclick="togglePreview('alert-preview')">Preview</button>
+  <div class="preview-box" id="alert-preview">
+    <div class="alert">This is an alert message.</div>
+  </div>
+  <div id="alert-code" style="display: none;">
+    &lt;div class="alert"&gt;This is an alert message.&lt;/div&gt;
+  </div>
+  <span id="alert-copied" class="copied-message">Copied!</span>
+</div>
+
+<!-- Button Variants -->
+<div class="box">
+  <span class="copy-icon" title="Copy" onclick="copyCode('button-code', 'button-copied')">🔗</span>
+  <h2>Button Variants</h2>
+  <button class="btn-primary">Primary</button>
+  <button class="btn-secondary">Secondary</button>
+  <button class="btn-danger">Danger</button>
+  <button class="copy-btn" onclick="togglePreview('button-preview')">Preview</button>
+  <div class="preview-box" id="button-preview">
+    <button class="btn-primary">Primary</button>
+    <button class="btn-secondary">Secondary</button>
+    <button class="btn-danger">Danger</button>
+  </div>
+  <div id="button-code" style="display: none;">
+    &lt;button class="btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="btn-secondary"&gt;Secondary&lt;/button&gt;
+    &lt;button class="btn-danger"&gt;Danger&lt;/button&gt;
+  </div>
+  <span id="button-copied" class="copied-message">Copied!</span>
+</div>
+<!-- Progress Bar Example -->
+<div class="box">
+  <h2>Progress Bar Example</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+  <button class="btn-primary" onclick="startProgress()">Start Progress</button>
+</div>
+
 
   <!-- Footer -->
   <footer>
