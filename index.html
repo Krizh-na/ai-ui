@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom UI Library - NOVA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="logo">NOVA UI</div>
+    <div class="nav-items">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+    <div id="dark-mode">
+      <label class="switch">
+        <input type="checkbox" id="mode-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Welcome to NOVA UI Library</h1>
+    <p>Your one-stop solution for building modern, clean, and responsive interfaces.</p>
+    <button class="btn-primary">Get Started</button>
+  </section>
+
+  <!-- UI Components -->
+  <div class="container">
+    <!-- Card -->
+    <div class="box">
+      <span class="copy-icon" title="Copy" onclick="copyCode('card-code', 'card-copied')">🔗</span>
+      <h2>Card Example</h2>
+      <div class="ui-card">
+        <p>This is a UI card. It is great for displaying information.</p>
+      </div>
+      <button class="copy-btn" onclick="togglePreview('card-preview')">Preview</button>
+      <div class="preview-box" id="card-preview">
+        <div class="ui-card">
+          <p>This is a UI card. It is great for displaying information.</p>
+        </div>
+      </div>
+      <div id="card-code" style="display: none;">
+        &lt;div class="ui-card"&gt;
+          &lt;p&gt;This is a UI card. It is great for displaying information.&lt;/p&gt;
+        &lt;/div&gt;
+      </div>
+      <span id="card-copied" class="copied-message">Copied!</span>
+    </div>
+
+    <!-- Input -->
+    <div class="box">
+      <span class="copy-icon" title="Copy" onclick="copyCode('input-code', 'input-copied')">🔗</span>
+      <h2>Input Example</h2>
+      <input class="ui-input" type="text" placeholder="Enter your name" />
+      <button class="copy-btn" onclick="togglePreview('input-preview')">Preview</button>
+      <div class="preview-box" id="input-preview">
+        <input class="ui-input" type="text" placeholder="Enter your name" />
+      </div>
+      <div id="input-code" style="display: none;">
+        &lt;input class="ui-input" type="text" placeholder="Enter your name" /&gt;
+      </div>
+      <span id="input-copied" class="copied-message">Copied!</span>
+    </div>
+
+    <!-- Badge -->
+    <div class="box">
+      <span class="copy-icon" title="Copy" onclick="copyCode('badge-code', 'badge-copied')">🔗</span>
+      <h2>Badge Example</h2>
+      <span class="badge">New</span>
+      <button class="copy-btn" onclick="togglePreview('badge-preview')">Preview</button>
+      <div class="preview-box" id="badge-preview">
+        <span class="badge">New</span>
+      </div>
+      <div id="badge-code" style="display: none;">
+        &lt;span class="badge"&gt;New&lt;/span&gt;
+      </div>
+      <span id="badge-copied" class="copied-message">Copied!</span>
+    </div>
+
+    <!-- Modal -->
+    <div class="box">
+      <span class="copy-icon" title="Copy" onclick="copyCode('modal-code', 'modal-copied')">🔗</span>
+      <h2>Modal Example</h2>
+      <button class="btn-primary" onclick="showModal()">Show Modal</button>
+      <button class="copy-btn" onclick="togglePreview('modal-preview')">Preview</button>
+      <div class="preview-box" id="modal-preview">
+        <button class="btn-primary" onclick="showModal()">Show Modal</button>
+      </div>
+      <div id="modal-code" style="display: none;">
+        &lt;button class="btn-primary" onclick="showModal()"&gt;Show Modal&lt;/button&gt;
+        &lt;div class="modal" id="modal"&gt;
+          &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+              &lt;span class="close" id="modal-close"&gt;&times;&lt;/span&gt;
+              &lt;h2&gt;Modal Header&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+              &lt;p&gt;This is a modal window.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </div>
+      <span id="modal-copied" class="copied-message">Copied!</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NOVA UI Library. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" id="modal-close">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
+      <div class="modal-body">
+        <p>This is a modal window. You can use it to display important messages.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
