@@ -7,14 +7,9 @@ if (localStorage.getItem('darkMode') === 'true') {
   modeToggle.checked = true;
 }
 
-modeToggle.addEventListener('change', function () {
-  if (modeToggle.checked) {
-    body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'true');
-  } else {
-    body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'false');
-  }
+modeToggle.addEventListener('change', () => {
+  body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', modeToggle.checked.toString());
 });
 
 // Modal Functionality
@@ -22,7 +17,7 @@ const modal = document.getElementById('modal');
 const modalClose = document.getElementById('modal-close');
 
 function showModal() {
-  modal.style.display = 'flex'; // Ensure modal is displayed as a flexbox
+  modal.style.display = 'flex';
 }
 
 modalClose.addEventListener('click', () => {
@@ -43,7 +38,7 @@ function copyCode(codeId, copiedId) {
     copiedMessage.classList.add('visible');
     setTimeout(() => {
       copiedMessage.classList.remove('visible');
-    }, 1500); // Message disappears after 1.5 seconds
+    }, 1500);
   }).catch(err => {
     console.error("Failed to copy:", err);
   });
